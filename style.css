@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fff;
+  color: #3f4145;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sahifa {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+.qahramon {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(115deg, #f3fbfd 0%, #f8fcfc 70%, #f3f6fd 100%);
+}
+
+.sarbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1200px, calc(100% - 80px));
+  height: 80px;
+  margin: 0 auto;
+}
+
+.nishon {
+  display: block;
+  width: 160px;
+  height: auto;
+}
+
+.menyu {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.unsuri-menyu {
+  color: #c1c5c8;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.unsuri-menyu.faol {
+  color: #399ff2;
+}
+
+.ogoz-kardan {
+  display: grid;
+  place-items: center;
+  width: 89px;
+  height: 30px;
+  margin-left: -3px;
+  border-radius: 4px;
+  background: #399ff2;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.matni-qahramon {
+  position: relative;
+  width: min(1200px, calc(100% - 80px));
+  height: calc(100vh - 80px);
+  margin: 0 auto;
+}
+
+.muqaddima {
+  position: relative;
+  z-index: 1;
+  padding-top: clamp(110px, 17vh, 190px);
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+h1 span {
+  color: #399ff2;
+}
+
+.muqaddima p {
+  margin: 18px 0 30px;
+  color: #b9c0c4;
+  font-size: 9px;
+  line-height: 2;
+}
+
+.justuju {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 355px;
+  height: 54px;
+  padding: 8px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.maydoni-justuju,
+.makon {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  border-radius: 6px;
+  background: #fafafd;
+  color: #aeb1b7;
+  font-size: 10px;
+}
+
+.maydoni-justuju {
+  flex: 1;
+  padding: 0 18px;
+}
+
+.makon {
+  justify-content: space-between;
+  width: 127px;
+  padding: 0 12px;
+  color: #494b50;
+  white-space: nowrap;
+}
+
+.tircha {
+  width: 7px;
+  height: 7px;
+  margin: -4px 2px 0 8px;
+  border-right: 1.5px solid #494b50;
+  border-bottom: 1.5px solid #494b50;
+  transform: rotate(45deg);
+}
+
+.tugmai-justuju {
+  display: grid;
+  flex: 0 0 44px;
+  place-items: center;
+  height: 38px;
+  border-radius: 6px;
+  background: #399ff2;
+  cursor: pointer;
+}
+
+.tugmai-justuju img {
+  width: 22px;
+  height: 22px;
+}
+
+.min-taqai-dukhtur {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: 55%;
+  pointer-events: none;
+}
+
+.davra {
+  position: absolute;
+  top: 8%;
+  right: -5%;
+  width: min(48vw, 600px);
+  height: auto;
+  opacity: 0.28;
+}
+
+.dukhtur {
+  position: absolute;
+  right: -8%;
+  bottom: 0;
+  z-index: 1;
+  width: min(55vw, 720px);
+  height: auto;
+}
+
+.nishonai-ovezon {
+  position: absolute;
+  z-index: 2;
+  width: 58px;
+  height: 58px;
+}
+
+.telefon {
+  top: 127px;
+  left: 4px;
+}
+
+.navori-tasviri {
+  top: 120px;
+  right: 20px;
+}
+
+.guftugu {
+  top: 266px;
+  left: -21px;
+  width: 56px;
+  height: 56px;
+}
+
+.kartai-bemor {
+  position: absolute;
+  z-index: 2;
+  top: 317px;
+  right: -14px;
+  width: 116px;
+  height: auto;
+}
+
+.kartai-bahoguzori {
+  position: absolute;
+  z-index: 2;
+  bottom: 48px;
+  left: -20px;
+  width: 145px;
+  height: auto;
+}
+
+.poyoni-qahramon {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .sarbar,
+  .matni-qahramon {
+    width: calc(100% - 48px);
+  }
+
+  .menyu {
+    gap: 18px;
+  }
+
+  .min-taqai-dukhtur {
+    width: 58%;
+  }
+}
+
+@media (max-width: 640px) {
+  .sarbar,
+  .matni-qahramon {
+    width: calc(100% - 32px);
+  }
+
+  .sarbar {
+    height: 68px;
+  }
+
+  .nishon {
+    width: 120px;
+  }
+
+  .menyu {
+    gap: 12px;
+  }
+
+  .unsuri-menyu {
+    font-size: 10px;
+  }
+
+  .unsuri-menyu:nth-child(2),
+  .unsuri-menyu:nth-child(3),
+  .unsuri-menyu:nth-child(4) {
+    display: none;
+  }
+
+  .matni-qahramon {
+    height: calc(100vh - 68px);
+  }
+
+  .muqaddima {
+    padding-top: 76px;
+  }
+
+  h1 {
+    font-size: clamp(26px, 8vw, 34px);
+  }
+
+  .muqaddima p {
+    max-width: 340px;
+    font-size: 11px;
+  }
+
+  .judo-kunanda {
+    display: none;
+  }
+
+  .justuju {
+    width: min(100%, 355px);
+  }
+
+  .min-taqai-dukhtur {
+    width: 100%;
+  }
+
+  .davra {
+    top: auto;
+    right: -20%;
+    bottom: -8%;
+    width: 90vw;
+  }
+
+  .dukhtur {
+    right: -22%;
+    width: min(105vw, 500px);
+  }
+
+  .telefon,
+  .navori-tasviri,
+  .guftugu,
+  .kartai-bemor,
+  .kartai-bahoguzori {
+    display: none;
+  }
+}
